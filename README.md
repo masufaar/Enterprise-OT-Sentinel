@@ -140,7 +140,6 @@ API_KEY=your_gemini_key_here
 ```bash
 docker run -it --rm \
   --env-file .env \
-  -v .:/project \
   -p 5173:5173 \
   enterprisesentinel
 ```
