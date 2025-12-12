@@ -123,9 +123,11 @@ Every critical state transition requires human approval. The AI proposes, the Hu
 *   Google Gemini API Key (Paid Tier recommended for Gemini 3 Pro)
 
 ### Installation
+
 ```bash
 git clone https://github.com/your-org/enterprise-ot-sentinel.git
-npm install
+cd enterprise-ot-sentinel/
+docker build -t enterprisesentinel .
 ```
 
 ### Configuration
@@ -136,8 +138,13 @@ API_KEY=your_gemini_key_here
 
 ### Run Application
 ```bash
-npm start
+docker run -it --rm \
+  --env-file .env \
+  -v .:/project \
+  -p 5173:5173 \
+  enterprisesentinel
 ```
+
 Access the dashboard at `http://localhost:5173`.
 
 ---
