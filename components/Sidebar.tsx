@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ViewState } from '../types';
 import { LayoutDashboard, TrendingUp, ShieldCheck, Cpu, Factory, FlaskConical, Lock } from 'lucide-react';
@@ -19,13 +18,13 @@ const Sidebar: React.FC<SidebarProps> = ({ currentView, onChangeView }) => {
 
   return (
     <div className="w-64 h-screen bg-slate-900 border-r border-slate-700 flex flex-col fixed left-0 top-0">
-      <div className="p-6 flex items-center gap-3 border-b border-slate-700">
-        <div className="bg-neon-blue p-2 rounded-lg">
+      <div className="p-6 flex items-start gap-3 border-b border-slate-700">
+        <div className="bg-neon-blue p-2 rounded-lg mt-1">
           <Cpu className="text-white" size={24} />
         </div>
         <div>
-          <h1 className="text-xl font-bold text-white tracking-tight">OT SENTINEL</h1>
-          <p className="text-xs text-slate-400">AI Monitor v3.0</p>
+          <h1 className="text-lg font-bold text-white tracking-tight leading-tight">ENTERPRISE<br/>OT SENTINEL</h1>
+          <p className="text-xs text-slate-400 mt-1">AI Monitor v3.0</p>
         </div>
       </div>
 

@@ -1,11 +1,10 @@
-
 import { test, expect } from '@playwright/test';
 
 // END-TO-END TESTING
 // This file simulates a real user journey in a browser environment.
 // It verifies that the application flow (Dashboard -> Detail) works as expected.
 
-test.describe('OT Sentinel App Flow', () => {
+test.describe('Enterprise OT Sentinel App Flow', () => {
   
   test.beforeEach(async ({ page }) => {
     // Navigate to the local application (assumed running on localhost:3000)
@@ -13,8 +12,14 @@ test.describe('OT Sentinel App Flow', () => {
   });
 
   test('should load the dashboard and display machines', async ({ page }) => {
-    // Verify title exists
-    await expect(page.getByText('OT SENTINEL')).toBeVisible();
+    // Verify title exists in the sidebar
+    // We search for the specific text "ENTERPRISE" and "OT SENTINEL" separately or part of the header block
+    // Given the HTML structure <h1 ...>ENTERPRISE<br/>OT SENTINEL</h1>, getByText might need care.
+    // getByText('ENTERPRISE') or getByText('OT SENTINEL') should work if split, or we look for text visible.
+    
+    await expect(page.getByText('ENTERPRISE')).toBeVisible();
+    await expect(page.getByText('OT SENTINEL').first()).toBeVisible();
+
     await expect(page.getByText('Production Line Overview')).toBeVisible();
 
     // Verify at least one machine column is present (checking for the column testid or class)

@@ -1,6 +1,7 @@
-# Contributing to OT Sentinel AI
 
-Thank you for your interest in contributing to **OT Sentinel AI**. We welcome contributions from the community to help make industrial autonomy more secure and accessible.
+# Contributing to Enterprise OT Sentinel
+
+Thank you for your interest in contributing to **Enterprise OT Sentinel**. We welcome contributions from the community to help make industrial autonomy more secure and accessible.
 
 ## 🛠️ Development Workflow
 

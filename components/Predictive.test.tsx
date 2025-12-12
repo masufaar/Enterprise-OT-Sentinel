@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, test, expect, beforeEach, jest } from '@jest/globals';
@@ -112,7 +113,7 @@ describe('Predictive Component', () => {
       }
     ];
 
-    (generateDynamicFMEA as jest.Mock).mockResolvedValue(mockNewFMEA);
+    (generateDynamicFMEA as jest.Mock).mockImplementation(async () => mockNewFMEA);
 
     render(<Predictive machines={MOCK_MACHINES} />);
 

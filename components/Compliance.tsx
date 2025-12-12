@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ComplianceItem } from '../types';
 import { generateComplianceReport } from '../services/geminiService';
@@ -167,7 +166,7 @@ const Compliance: React.FC = () => {
         
         doc.setFontSize(10);
         doc.setTextColor(148, 163, 184); // Slate 400
-        doc.text("OT SENTINEL AI | BOARD BRIEFING", pageWidth - 15, 25, { align: 'right' });
+        doc.text("ENTERPRISE OT SENTINEL | BOARD BRIEFING", pageWidth - 15, 25, { align: 'right' });
       };
 
       // HELPER: Draw Footer

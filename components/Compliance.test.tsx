@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { describe, test, expect, beforeEach, jest } from '@jest/globals';
@@ -36,10 +37,10 @@ describe('Compliance Component', () => {
 
   test('Agent workflow: transitions to Proposal and then Working', async () => {
     // Setup Mock for Report Generation
-    (generateComplianceReport as jest.Mock).mockResolvedValue({
+    (generateComplianceReport as jest.Mock).mockImplementation(async () => ({
       text: "EXECUTIVE SUMMARY: Risk is High.",
       sources: ["https://dora-legislation.eu"]
-    });
+    }));
 
     render(<Compliance />);
 

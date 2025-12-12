@@ -17,7 +17,7 @@ jest.mock('../services/edgeService', () => ({
 
 // Mock Gemini Service to avoid API calls
 jest.mock('../services/geminiService', () => ({
-  generateScenarioAnalysis: jest.fn().mockResolvedValue("MOCK_ANALYSIS: Simulation indicates 15% drop in OEE."),
+  generateScenarioAnalysis: jest.fn(() => Promise.resolve("MOCK_ANALYSIS: Simulation indicates 15% drop in OEE.")),
 }));
 
 describe('Planning (Scenario Simulation) Component', () => {
