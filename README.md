@@ -125,7 +125,7 @@ Every critical state transition requires human approval. The AI proposes, the Hu
 ### Installation
 
 ```bash
-git clone https://github.com/your-org/enterprise-ot-sentinel.git
+git clone https://github.com/masufaar/enterprise-ot-sentinel.git
 cd enterprise-ot-sentinel/
 docker build -t enterprisesentinel .
 ```
